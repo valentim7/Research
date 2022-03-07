@@ -26,8 +26,9 @@ Our first task is to create an array of frequencies, for the entire flight, that
 ## 1) Spectrograms_PF
 
 The basic idea of this program is to go through every timestamp for a given time range and obtain the value of the plasma frequency. The time range is a portion of the big graydata you used in Saving_specific_intervals_of_HF_and_VLF_data.m, as illustrated below:
-
-
+<p align = "center">
+<img width = "600" alt="image" src = "https://user-images.githubusercontent.com/101138915/157133621-bc772fbb-c980-4fb8-8738-d923de3b1fd6.jpeg">
+</p>
 <p align = "center">
 Figure 3 - Time ranges of the flight
 </p>
