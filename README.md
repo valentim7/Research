@@ -35,7 +35,9 @@ Figure 3 - Time ranges of the flight
 
 The program first calculates the interpolated frequency:
 
-f =((t-t_1 ))/((t_1-t_2 ) ) (f_1-f_2 )+f_1
+<p align = "center">
+<img width = "300" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134048-5c89e49a-7217-42c1-b16e-4707a4848f13.jpg">
+</p>
 
 Where t denotes a time in the range selected, t1 is the first timestamp after t and t2 is the first timestamp before t. Consequently, f1 and f2 are the corresponding frequencies for t1 and t2. In any case, once we have f, we set two boundaries:
 
@@ -47,21 +49,11 @@ Further improvements to this upper bound could account for rising the lower boun
 
 From that, we calculate the average of the two lines, which is denoted by the yellow line in figure 1. Preferably, we do not want this line to be in the middle of the two horizontal lines. This will depend on the shape of our spectra for a given time range. The interpolated frequency is the first intersection of the yellow line from right to left; sometimes, moving this yellow line up a little bit will make us reach more correct intersection points, but occasionally, it could be the other way around. Therefore, we make those changes by altering the default value of 0.997 in the section “Third Horizontal Line.” The table below provides a better depiction for the effect of changing the default value to another, closer decimal number. 
 
-Specific decimals	% Closer to the Lower Bound from the Upper Bound
-1.04	~ 97%
-1.02	~ 70%
-1	50%
-0.997	~ 45%
-0.992	~ 40%
-0.988	~ 30%
-0.978	~ 20%
-0.972	~ 10%
-0.967	~ 3%
 
-Note 4: Make sure you have the function “intersections” downloaded and properly saved in your main MATLAB directory.
+
 From here, the first data for the plasma frequency is obtained and it is plotted in purple along with the spectrogram for the specified time range. This is the first “sketch” of the plasma frequency since the program not always recognizes the correct downward transition. You can sometimes get some spikes or deeps that do not follow the trend of the cutoffs. For those cases, there is no other way! We need to manually correct them. The correcting_PF.m does that for us. However, before running this program, we must keep track of all intervals that need correction.
-	Zoom in the desired area—the more you zoom in the more specific the x-axis gets.
-	Annotate all the time ranges that need correction into a separate document or paper. Here is an example of this process:
+	1) Zoom in the desired area—the more you zoom in the more specific the x-axis gets.
+	2) Annotate all the time ranges that need correction into a separate document or paper. Here is an example of this process:
 
  
 Figure 4 Process for the detecting points that need correction
