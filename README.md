@@ -38,7 +38,7 @@ Figure 3 - Time ranges of the flight
 The program first calculates the interpolated frequency:
 
 <p align = "center">
-<img width = "400" alt="image" src= "https://user-images.githubusercontent.com/101138915/157134048-5c89e49a-7217-42c1-b16e-4707a4848f13.jpg">
+<img width = "350" alt="image" src= "https://user-images.githubusercontent.com/101138915/157134048-5c89e49a-7217-42c1-b16e-4707a4848f13.jpg">
 </p>
 
 Where t denotes a time in the range selected, t1 is the first timestamp after t and t2 is the first timestamp before t. Consequently, f1 and f2 are the corresponding frequencies for t1 and t2. In any case, once we have f, we set two boundaries:
@@ -58,7 +58,7 @@ c)	Zoom in the desired area—the more you zoom in the more specific the x-axis 
 d)	Annotate all the time ranges that need correction into a separate document or paper. Here is an example of this process:
 
 <p align = "center">
-<img width = "600" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134406-6969985d-3834-427a-8078-73d4a3b3cb53.jpeg">
+<img width = "600" img height = "500" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134406-6969985d-3834-427a-8078-73d4a3b3cb53.jpeg">
 </p>
 <p align = "center">	
 Figure 4 - Process for the detecting points that need correction
@@ -89,7 +89,7 @@ Figure 5 - Selecting correct candidates for the plasma frequency
 The program will give you a .txt file containing a table with the plasma frequencies and their corresponding timestamps and charge densities, which are calculated through the following relation:
 
 <p align = "center">
-<img width = "600" alt="image" src = "https://user-images.githubusercontent.com/101138915/157136080-628af89e-42f3-4ea8-ba3f-f54b38174a54.jpg">
+<img width = "200" alt="image" src = "https://user-images.githubusercontent.com/101138915/157136080-628af89e-42f3-4ea8-ba3f-f54b38174a54.jpg">
 </p>
 
 Where fpe represents the plasma frequency at a given point.
