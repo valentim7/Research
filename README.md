@@ -23,7 +23,7 @@ The first vertical red line from left to right denotes the value of the plasma f
 Our first task is to create an array of frequencies, for the entire flight, that are just above the real possible values for the plasma frequency. This can be done manually by simply creating spectrograms for a given time range and selecting the points above the “cutoffs.” To do so, we use a program created by Chrystal Moser, named as getting_freq_points_off_spectrograms.m. To use this program, however, we need another of her programs, entitled as Saving_specific_intervals_of_HF_and_VLF_data.m.
 
 # General comments on the process of getting the plasma frequency and generating the density profile
-## 1) Spectrograms_PF
+## 1. Spectrograms_PF
 
 The basic idea of this program is to go through every timestamp for a given time range and obtain the value of the plasma frequency. The time range is a portion of the big graydata you used in Saving_specific_intervals_of_HF_and_VLF_data.m, as illustrated below:
 
