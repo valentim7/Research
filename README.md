@@ -175,5 +175,5 @@ Note: the commented lines are for slopes that were considered as possible ones b
 <p align = "center">
 </p>
 <p align = "center">
-Figure 7 - Slopes without the presence of a sun spike in the electric field
+Figure 8 - Slopes without the presence of a sun spike in the electric field
 </p>
