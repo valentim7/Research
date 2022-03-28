@@ -143,7 +143,7 @@ With the data for the density and electric field at hand, we can now calculate t
 
 a. Select a time range that you want to look at, always try for an interval equal or greater than 40 seconds. After selecting this interval, a graph of the electric field vs time will appear.
 <p align = "center">
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/101138915/160319608-9a0ce12e-a4fa-4c32-a7e6-15ca0758b165.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/101138915/160319608-9a0ce12e-a4fa-4c32-a7e6-15ca0758b165.png">
 </p>
 <p align = "center">
 Figure 6 - Electric field as a function of time
@@ -157,6 +157,7 @@ If you input the correct starting point, you will be able to see the fifteen gra
 
 Here is an example for the starting point 615.97:
 <p align = "center">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/101138915/160320263-627e1619-b20c-40ba-8902-14a48951b10b.png">
 </p>
 <p align = "center">
 Figure 7 - Slopes without the presence of a sun spike in the electric field
@@ -173,7 +174,8 @@ The program plotting_slopes is simple. You just have to select the interval you 
 Note: the commented lines are for slopes that were considered as possible ones but were not included in the result for the selected files. They provide a good example, however, of how you can extract the correct slopes in the program without the need of loading a file with the slopes already extracted.
 
 <p align = "center">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/101138915/160320291-3d8296d9-b81c-41ef-80c6-065eef7787ef.png">
 </p>
 <p align = "center">
-Figure 8 - Slopes without the presence of a sun spike in the electric field
+Figure 8 - Slopes for the density and electric field
 </p>
