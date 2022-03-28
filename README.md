@@ -141,8 +141,8 @@ Sometimes, we end up choosing the wrong points to denote the plasma frequency. T
 With the data for the density and electric field at hand, we can now calculate their respective slopes using Fourier series. Unfortunately, the electric field data is filled with “sun spikes” that occur at a somewhat regular rate. We want to avoid those spikes, since they interfere directly on the value of the electric field slopes. In that case, we are only interested in the ranges that are between the sun spikes. The program fourier_series takes thirty of those ranges, calculate their Fourier series, and average every two of those intervals together, providing us with fifteen graphs at the end. Here is how the program works:
 
 a. Select a time range that you want to look at, always try for an interval equal or greater than 40 seconds. After selecting this interval, a graph of the electric field vs time will appear.
-
-
-
+<p align = "center">
+<img width="317" alt="image" src="https://user-images.githubusercontent.com/101138915/160319608-9a0ce12e-a4fa-4c32-a7e6-15ca0758b165.png">
+</p>
 
 
