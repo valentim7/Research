@@ -67,7 +67,7 @@ Figure 3 - Time ranges of the flight
 The program first calculates the interpolated frequency:
 
 <p align = "center">
-<img width = "250" alt="image" src= "https://user-images.githubusercontent.com/101138915/157134048-5c89e49a-7217-42c1-b16e-4707a4848f13.jpg">
+<img width = "300" alt="image" src= "https://user-images.githubusercontent.com/101138915/157134048-5c89e49a-7217-42c1-b16e-4707a4848f13.jpg">
 </p>
 
 Where t denotes a time in the range selected, t1 is the first timestamp after t and t2 is the first timestamp before t. Consequently, f1 and f2 are the corresponding frequencies for t1 and t2. In any case, once we have f, we set two boundaries:
