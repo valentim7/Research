@@ -13,7 +13,7 @@ We see here that there is a cutoff delimited by the spectrum of the waves. These
 As such, the entire process begins with finding the largest downward transition in a plot (power vs frequency) for a specific timestamp. As illustrated in the figure below:
 
 <p align = "center">
-<img width = "600" alt="image" src="https://user-images.githubusercontent.com/101138915/157120700-75b638a8-e11e-4710-b120-9e4a48eb336a.jpeg">
+<img width = "500" alt="image" src="https://user-images.githubusercontent.com/101138915/157120700-75b638a8-e11e-4710-b120-9e4a48eb336a.jpeg">
 </p>
 <p align = "center">
 Figure 2 -  Spectra with plasma frequency
@@ -57,7 +57,7 @@ Once you have the .txt files, make sure to add them to a specific folder. We nee
 The basic idea of this program is to go through every timestamp for a given time range and obtain the value of the plasma frequency. The time range is a portion of the big graydata you used in Saving_specific_intervals_of_HF_and_VLF_data.m, as illustrated below:
 
 <p align = "center">
-<img width = "600" alt="image" src="https://user-images.githubusercontent.com/101138915/157133621-bc772fbb-c980-4fb8-8738-d923de3b1fd6.jpeg">
+<img width = "500" alt="image" src="https://user-images.githubusercontent.com/101138915/157133621-bc772fbb-c980-4fb8-8738-d923de3b1fd6.jpeg">
 </p>
 
 <p align = "center">
@@ -67,7 +67,7 @@ Figure 3 - Time ranges of the flight
 The program first calculates the interpolated frequency:
 
 <p align = "center">
-<img width = "350" alt="image" src= "https://user-images.githubusercontent.com/101138915/157134048-5c89e49a-7217-42c1-b16e-4707a4848f13.jpg">
+<img width = "250" alt="image" src= "https://user-images.githubusercontent.com/101138915/157134048-5c89e49a-7217-42c1-b16e-4707a4848f13.jpg">
 </p>
 
 Where t denotes a time in the range selected, t1 is the first timestamp after t and t2 is the first timestamp before t. Consequently, f1 and f2 are the corresponding frequencies for t1 and t2. In any case, once we have f, we set two boundaries:
@@ -78,7 +78,7 @@ b)	We take the average of the points that are below the interpolated frequency a
 From that, we calculate the average of the two lines, which is denoted by the yellow line in figure 1. Preferably, we do not want this line to be in the middle of the two horizontal lines. This will depend on the shape of our spectra for a given time range. The interpolated frequency is the first intersection of the yellow line from right to left; sometimes, moving this yellow line up a little bit will make us reach more correct intersection points, but occasionally, it could be the other way around. Therefore, we make those changes by altering the default value of 0.997 in the section “Third Horizontal Line.” The table below provides a better depiction for the effect of changing the default value to another, closer decimal number. 
 
 <p align = "center">
-<img width = "600" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134656-0350bd04-8c4c-4dde-9aa6-95905730cdf4.jpg">
+<img width = "500" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134656-0350bd04-8c4c-4dde-9aa6-95905730cdf4.jpg">
 </p>
 
 From here, the first data for the plasma frequency is obtained and it is plotted in purple along with the spectrogram for the specified time range. This is the first “sketch” of the plasma frequency since the program does not always recognize the correct downward transition. You can sometimes get some spikes or minima that do not follow the trend of the cutoffs. For those cases, there is no choice except to manually correct them. The correcting_PF.m does that for us. However, before running this program, we must keep track of all intervals that need correction.
@@ -87,7 +87,7 @@ c)	Zoom in the desired area—the more you zoom in the more specific the x-axis 
 d)	Annotate all the time ranges that need correction into a separate document or paper. Here is an example of this process:
 
 <p align = "center">
-<img width = "600" img height = "500" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134406-6969985d-3834-427a-8078-73d4a3b3cb53.jpeg">
+<img width = "500" img height = "500" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134406-6969985d-3834-427a-8078-73d4a3b3cb53.jpeg">
 </p>
 <p align = "center">	
 Figure 4 - Process for the detecting points that need correction
@@ -109,7 +109,7 @@ The code follows the same logic from Spectrograms_PF, but this time, instead of 
 Here is an example of how the program looks like for the interval we just annotated [628.2 628.55]:
 
 <p align = "center">
-<img width = "600" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134831-f63c8ffa-c460-48a2-b8d2-15cea2fe94fa.jpeg">
+<img width = "500" alt="image" src = "https://user-images.githubusercontent.com/101138915/157134831-f63c8ffa-c460-48a2-b8d2-15cea2fe94fa.jpeg">
 </p>
 <p align = "center">
 Figure 5 - Selecting correct candidates for the plasma frequency
@@ -118,7 +118,7 @@ Figure 5 - Selecting correct candidates for the plasma frequency
 The program will give you a .txt file containing a table with the plasma frequencies and their corresponding timestamps and charge densities, which are calculated through the following relation:
 
 <p align = "center">
-<img width = "200" alt="image" src = "https://user-images.githubusercontent.com/101138915/157136080-628af89e-42f3-4ea8-ba3f-f54b38174a54.jpg">
+<img width = "150" alt="image" src = "https://user-images.githubusercontent.com/101138915/157136080-628af89e-42f3-4ea8-ba3f-f54b38174a54.jpg">
 </p>
 
 Where fpe represents the plasma frequency at a given point.
@@ -167,14 +167,14 @@ Once you obtain the correct list of starting points, uncomment the lines from th
 
 Note: usually, because of some spikes and/or the presence of non-stationary intervals in the density, some of those slopes will not be considered. Write down the number corresponding to the graphs you think are working well. You are going to need those numbers, as they will be the indices used to extract the correct slopes from the .txt file you just created.
 
-# 6. Plotting density along the extracted slopes
+## 6. Plotting density along the extracted slopes
 
 The program plotting_slopes is simple. You just have to select the interval you want to plot, and the program will do the rest for you. Keep in mind, however, that I am passing to this program the file with the slopes already selected, which in my case is the file my_slopes.mat.
 
 Note: the commented lines are for slopes that were considered as possible ones but were not included in the result for the selected files. They provide a good example, however, of how you can extract the correct slopes in the program without the need of loading a file with the slopes already extracted.
 
 <p align = "center">
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/101138915/160320291-3d8296d9-b81c-41ef-80c6-065eef7787ef.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/101138915/160320291-3d8296d9-b81c-41ef-80c6-065eef7787ef.png">
 </p>
 <p align = "center">
 Figure 8 - Slopes for the density and electric field
