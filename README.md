@@ -136,13 +136,44 @@ Sometimes, we end up choosing the wrong points to denote the plasma frequency. T
 6)	Save the .txt tables into a specific folder.
 7)	Once the entire flight is corrected, concatenate all the .txt files by using the cat command in the terminal window.
 
+# Getting and plotting the slopes for the density and electric field
 ## 5. Taking Fourier Series of the density and calculating slopes
 
 With the data for the density and electric field at hand, we can now calculate their respective slopes using Fourier series. Unfortunately, the electric field data is filled with “sun spikes” that occur at a somewhat regular rate. We want to avoid those spikes, since they interfere directly on the value of the electric field slopes. In that case, we are only interested in the ranges that are between the sun spikes. The program fourier_series takes thirty of those ranges, calculate their Fourier series, and average every two of those intervals together, providing us with fifteen graphs at the end. Here is how the program works:
 
 a. Select a time range that you want to look at, always try for an interval equal or greater than 40 seconds. After selecting this interval, a graph of the electric field vs time will appear.
 <p align = "center">
-<img width="317" alt="image" src="https://user-images.githubusercontent.com/101138915/160319608-9a0ce12e-a4fa-4c32-a7e6-15ca0758b165.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/101138915/160319608-9a0ce12e-a4fa-4c32-a7e6-15ca0758b165.png">
+</p>
+<p align = "center">
+Figure 6 - Electric field as a function of time
 </p>
 
+b. Take a close look at the graph and select a starting point that is right after a sun spike.
 
+If you input the correct starting point, you will be able to see the fifteen graphs encompassing a range of 30 seconds in total approximately, with no evidence of a sun spike. If you do see a sun spike in one of the graphs for the electric field, run the program again until you find a correct starting point. For the TRICE2-High flight, I have mapped those points already, they are, in seconds:
+
+• 500.75, 531.17, 559.76, 587.43, 615.97, 644.6, 673.12, 701.71, 730.35, 758.87, 787.47.
+
+Here is an example for the starting point 615.97:
+<p align = "center">
+</p>
+<p align = "center">
+Figure 7 - Slopes without the presence of a sun spike in the electric field
+</p>
+
+Once you obtain the correct list of starting points, uncomment the lines from the section “saving the slopes to a .txt file” in the program. Run the program again using those starting points and you will get a .txt file with the slopes for the density and electric field along with their respective timestamps.
+
+Note: usually, because of some spikes and/or the presence of non-stationary intervals in the density, some of those slopes will not be considered. Write down the number corresponding to the graphs you think are working well. You are going to need those numbers, as they will be the indices used to extract the correct slopes from the .txt file you just created.
+
+# 6. Plotting density along the extracted slopes
+
+The program plotting_slopes is simple. You just have to select the interval you want to plot, and the program will do the rest for you. Keep in mind, however, that I am passing to this program the file with the slopes already selected, which in my case is the file my_slopes.mat.
+
+Note: the commented lines are for slopes that were considered as possible ones but were not included in the result for the selected files. They provide a good example, however, of how you can extract the correct slopes in the program without the need of loading a file with the slopes already extracted.
+
+<p align = "center">
+</p>
+<p align = "center">
+Figure 7 - Slopes without the presence of a sun spike in the electric field
+</p>
