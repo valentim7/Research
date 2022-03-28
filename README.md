@@ -34,7 +34,7 @@ a.	This frequency range is sufficient for visualizing and tracking the points ab
 3)	Select the graydata file for your flight.
 4)	Done! The program will save a .mat extension (e.g.: 13-Oct-2021-Trice2-Hi-HF--0-2000kHz_spectrogram_data--150-200s) with the necessary power, frequency, and time data for getting_freq_points_off_spectrograms.m.
 
-# 1.2.	Getting_freq_points_off_spectrograms.m
+## 1.2.	Getting_freq_points_off_spectrograms.m
 
 1)	Load your saved file from the previous program.
 2)	Input the same time and frequency range.
@@ -43,11 +43,11 @@ a.	This frequency range is sufficient for visualizing and tracking the points ab
 5)	Press enter and close the spectrogram.
 6)	Done! Now you have a .mat and .txt version (e.g: plasma_freq_points_150-200sec) portraying the values of the frequencies you selected and their corresponding time.
 
-# 1.3.	General discussion
+## 1.3.	General discussion
 
 The aforementioned steps can be done in two main ways: you can start with 1.1 and do it for the entire flight first, saving all the .mat extensions and applying them to 1.2 afterwards. Or you can do 1.1 and proceed right to 1.2, repeating this process until you reach the end of the flight.
 
-# 1.3.1. Concatenating the files
+## 1.3.1. Concatenating the files
 
 Once you have the .txt files, make sure to add them to a specific folder. We need to concatenate them, because we are only interested in a single, concise file containing all the data we need. We can do so by using the terminal window.
 
